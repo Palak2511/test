@@ -1,0 +1,32 @@
+<?php
+/**
+ * The template for displaying the 404 template in the Demo Theme.
+ *
+ * @package WordPress
+ * @subpackage Demo Theme
+ */
+
+get_header();
+?>
+
+<main id="site-content" role="main">
+
+	<div class="section-inner thin error404-content">
+
+		<h1 class="entry-title"><?php _e( 'Page Not Found', 'demotheme' ); ?></h1>
+
+		<div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'demotheme' ); ?></p></div>
+
+		<?php
+		get_search_form(
+			array(
+				'aria_label' => __( '404 not found', 'demotheme' ),
+			)
+		);
+		?>
+
+	</div><!-- .section-inner -->
+
+</main><!-- #site-content -->
+<?php
+get_footer();
